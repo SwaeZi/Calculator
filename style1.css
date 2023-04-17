@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: "Roboto";
+    font-weight: 100;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: orange;
+    
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px,auto) repeat(5,80px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 30px;
+    border: rgb(30, 30, 30),1px;
+    border-radius: 10px;
+    background-color: rgb(198, 198, 198);
+    outline: none;
+}
+
+.calculator-grid > button:hover {
+    background-color: rgb(121, 121, 121);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.85) ;
+    font-size: 20px;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 30px;
+}
+
